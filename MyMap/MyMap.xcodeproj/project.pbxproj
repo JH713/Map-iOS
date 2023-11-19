@@ -13,7 +13,11 @@
 		A66E4B042B0A36130042B486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66E4B032B0A36130042B486 /* Assets.xcassets */; };
 		A66E4B072B0A36130042B486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66E4B052B0A36130042B486 /* LaunchScreen.storyboard */; };
 		A66E4B0F2B0A37590042B486 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E4B0E2B0A37590042B486 /* MainTabBarController.swift */; };
-		A66E4B112B0A3E9E0042B486 /* PrivacyInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66E4B102B0A3E9E0042B486 /* PrivacyInfo.plist */; };
+		A66E4B142B0A43410042B486 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E4B132B0A43410042B486 /* WishlistViewController.swift */; };
+		A66E4B162B0A43510042B486 /* VisitedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E4B152B0A43510042B486 /* VisitedViewController.swift */; };
+		A66E4B192B0A45270042B486 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A66E4B182B0A45270042B486 /* SnapKit */; };
+		A66E4B282B0A64430042B486 /* KakaoMapsSDK_SPM in Frameworks */ = {isa = PBXBuildFile; productRef = A66E4B272B0A64430042B486 /* KakaoMapsSDK_SPM */; };
+		A66E4B2D2B0A75D90042B486 /* KakaoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E4B2C2B0A75D90042B486 /* KakaoMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +29,9 @@
 		A66E4B062B0A36130042B486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A66E4B082B0A36130042B486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A66E4B0E2B0A37590042B486 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		A66E4B102B0A3E9E0042B486 /* PrivacyInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.plist; sourceTree = "<group>"; };
+		A66E4B132B0A43410042B486 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		A66E4B152B0A43510042B486 /* VisitedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedViewController.swift; sourceTree = "<group>"; };
+		A66E4B2C2B0A75D90042B486 /* KakaoMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66E4B192B0A45270042B486 /* SnapKit in Frameworks */,
+				A66E4B282B0A64430042B486 /* KakaoMapsSDK_SPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +66,26 @@
 		A66E4AF92B0A36100042B486 /* MyMap */ = {
 			isa = PBXGroup;
 			children = (
+				A66E4B122B0A43150042B486 /* ViewController */,
 				A66E4AFA2B0A36100042B486 /* AppDelegate.swift */,
 				A66E4AFC2B0A36100042B486 /* SceneDelegate.swift */,
 				A66E4B0E2B0A37590042B486 /* MainTabBarController.swift */,
-				A66E4AFE2B0A36100042B486 /* MapViewController.swift */,
 				A66E4B032B0A36130042B486 /* Assets.xcassets */,
 				A66E4B052B0A36130042B486 /* LaunchScreen.storyboard */,
 				A66E4B082B0A36130042B486 /* Info.plist */,
-				A66E4B102B0A3E9E0042B486 /* PrivacyInfo.plist */,
 			);
 			path = MyMap;
+			sourceTree = "<group>";
+		};
+		A66E4B122B0A43150042B486 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A66E4AFE2B0A36100042B486 /* MapViewController.swift */,
+				A66E4B132B0A43410042B486 /* WishlistViewController.swift */,
+				A66E4B152B0A43510042B486 /* VisitedViewController.swift */,
+				A66E4B2C2B0A75D90042B486 /* KakaoMapViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +104,10 @@
 			dependencies = (
 			);
 			name = MyMap;
+			packageProductDependencies = (
+				A66E4B182B0A45270042B486 /* SnapKit */,
+				A66E4B272B0A64430042B486 /* KakaoMapsSDK_SPM */,
+			);
 			productName = MyMap;
 			productReference = A66E4AF72B0A36100042B486 /* MyMap.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +136,10 @@
 				Base,
 			);
 			mainGroup = A66E4AEE2B0A36100042B486;
+			packageReferences = (
+				A66E4B172B0A45270042B486 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A66E4B262B0A64430042B486 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */,
+			);
 			productRefGroup = A66E4AF82B0A36100042B486 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,7 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66E4B072B0A36130042B486 /* LaunchScreen.storyboard in Resources */,
-				A66E4B112B0A3E9E0042B486 /* PrivacyInfo.plist in Resources */,
 				A66E4B042B0A36130042B486 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +168,9 @@
 			files = (
 				A66E4AFF2B0A36100042B486 /* MapViewController.swift in Sources */,
 				A66E4AFB2B0A36100042B486 /* AppDelegate.swift in Sources */,
+				A66E4B2D2B0A75D90042B486 /* KakaoMapViewController.swift in Sources */,
+				A66E4B142B0A43410042B486 /* WishlistViewController.swift in Sources */,
+				A66E4B162B0A43510042B486 /* VisitedViewController.swift in Sources */,
 				A66E4B0F2B0A37590042B486 /* MainTabBarController.swift in Sources */,
 				A66E4AFD2B0A36100042B486 /* SceneDelegate.swift in Sources */,
 			);
@@ -350,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A66E4B172B0A45270042B486 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A66E4B262B0A64430042B486 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao-mapsSDK/KakaoMapsSDK-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A66E4B182B0A45270042B486 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A66E4B172B0A45270042B486 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A66E4B272B0A64430042B486 /* KakaoMapsSDK_SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A66E4B262B0A64430042B486 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */;
+			productName = KakaoMapsSDK_SPM;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A66E4AEF2B0A36100042B486 /* Project object */;
 }

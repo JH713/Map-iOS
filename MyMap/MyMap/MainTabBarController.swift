@@ -11,20 +11,23 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupTabBar()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupTabBar() {
+        viewControllers = [
+            setupVC(viewController: MapViewController(), title: "Map", image: UIImage(systemName: "map.fill")),
+            setupVC(viewController: WishlistViewController(), title: "Wishlist", image: UIImage(systemName: "star.fill")),
+            setupVC(viewController: VisitedViewController(), title: "Visited", image: UIImage(systemName: "checkmark.circle.fill"))
+        ]
     }
-    */
+    
+    private func setupVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
+        viewController.tabBarItem.title = title
+        viewController.tabBarItem.image = image
+        return UINavigationController(rootViewController: viewController)
+    }
 
 }
 
