@@ -72,7 +72,12 @@ class KakaoMapViewController: UIViewController, MapControllerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        mapController?.startRendering()
+//        mapController?.startRendering()
+        if mapController?.engineStarted == true {
+            mapController?.stopEngine()
+        }
+        
+            mapController?.startEngine()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -105,7 +110,6 @@ class KakaoMapViewController: UIViewController, MapControllerDelegate {
     func authenticationSucceeded() {
         if mapController?.engineStarted == true {
             mapController?.stopEngine()
-            mapController?.stopRendering()
         }
         
             mapController?.startEngine()    //엔진 시작 및 렌더링 준비. 준비가 끝나면 MapControllerDelegate의 addViews 가 호출된다.
@@ -152,8 +156,11 @@ class KakaoMapViewController: UIViewController, MapControllerDelegate {
      }
      
      @objc func didBecomeActive(){
-         print("becomeActive!!!!")
-         mapController?.startEngine()
+//         if mapController?.engineStarted == true {
+//             mapController?.stopEngine()
+//         }
+//
+//             mapController?.startEngine()
          mapController?.startRendering()
      }
 }

@@ -18,6 +18,8 @@
 		A66E4B192B0A45270042B486 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A66E4B182B0A45270042B486 /* SnapKit */; };
 		A66E4B282B0A64430042B486 /* KakaoMapsSDK_SPM in Frameworks */ = {isa = PBXBuildFile; productRef = A66E4B272B0A64430042B486 /* KakaoMapsSDK_SPM */; };
 		A66E4B2D2B0A75D90042B486 /* KakaoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E4B2C2B0A75D90042B486 /* KakaoMapViewController.swift */; };
+		A66E4B372B0A958C0042B486 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E4B362B0A958C0042B486 /* ResultsTableViewController.swift */; };
+		A66E4B392B0A98010042B486 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E4B382B0A98010042B486 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A66E4B132B0A43410042B486 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		A66E4B152B0A43510042B486 /* VisitedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedViewController.swift; sourceTree = "<group>"; };
 		A66E4B2C2B0A75D90042B486 /* KakaoMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapViewController.swift; sourceTree = "<group>"; };
+		A66E4B362B0A958C0042B486 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		A66E4B382B0A98010042B486 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				A66E4B132B0A43410042B486 /* WishlistViewController.swift */,
 				A66E4B152B0A43510042B486 /* VisitedViewController.swift */,
 				A66E4B2C2B0A75D90042B486 /* KakaoMapViewController.swift */,
+				A66E4B362B0A958C0042B486 /* ResultsTableViewController.swift */,
+				A66E4B382B0A98010042B486 /* ResultsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -166,10 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66E4B372B0A958C0042B486 /* ResultsTableViewController.swift in Sources */,
 				A66E4AFF2B0A36100042B486 /* MapViewController.swift in Sources */,
 				A66E4AFB2B0A36100042B486 /* AppDelegate.swift in Sources */,
 				A66E4B2D2B0A75D90042B486 /* KakaoMapViewController.swift in Sources */,
 				A66E4B142B0A43410042B486 /* WishlistViewController.swift in Sources */,
+				A66E4B392B0A98010042B486 /* ResultsViewController.swift in Sources */,
 				A66E4B162B0A43510042B486 /* VisitedViewController.swift in Sources */,
 				A66E4B0F2B0A37590042B486 /* MainTabBarController.swift in Sources */,
 				A66E4AFD2B0A36100042B486 /* SceneDelegate.swift in Sources */,
